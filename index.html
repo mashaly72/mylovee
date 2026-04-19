@@ -297,6 +297,13 @@ btn.innerText = "I got something else special for you… ❤️";
 btn.onclick = () => {
 document.getElementById('quiz').classList.add('hidden');
 document.getElementById('message').classList.remove('hidden');
+
+// 🔥 THIS IS THE FIX
+window.scrollTo({
+  top: document.body.scrollHeight,
+  behavior: 'smooth'
+});
+
 };
 setTimeout(() => {
 document.getElementById('nextBtn').innerHTML = "";
